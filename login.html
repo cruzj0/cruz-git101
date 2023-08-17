@@ -1,0 +1,44 @@
+<!--
+    Author: Jules Thaddeus Cruz
+    Comment: Javascript implementation will be prioritized. CSS to follow
+    To Do: Implement submit and cancel functionality
+-->
+<!DOCTYPE html>
+<head>
+    <style>
+        .login{
+            display: flex;
+            border: 1px solid black;
+            width: 300px;
+            height: 150px;
+        }
+        form{
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login">
+        <form action="" method="POST">
+            <table>
+                <tr>
+                    <!-- Username -->
+                    <td><label for="txtUsername">USERNAME: </label></td>
+                    <td><input type="text" id="txtUsername"></td><br>
+                </tr>
+                <tr>    
+                    <!-- Password -->
+                    <td><label for="txtUsername">PASSWORD: </label></td>
+                    <td><input type="text" id="txtUsername"></td><br>
+                </tr>
+                <tr>   
+                    <!-- Buttons -->
+                    <td><input type="submit" id="btnSubmit" value="SUBMIT"></td>
+                    <td><input type="reset" id="btnCancel" value="CANCEL"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>    
+
