@@ -1,7 +1,9 @@
 <!--
     Author: Jules Thaddeus Cruz
     Comment: Javascript implementation will be prioritized. CSS to follow
-    To Do: Implement submit and cancel functionality
+    To Do: Implement submit and cancel functionality 
+
+    Javascript done?
 -->
 <!DOCTYPE html>
 <head>
@@ -16,6 +18,15 @@
             margin: 0 auto;
         }
     </style>
+    <script>
+        function onLoginBtnClick(){
+            alert("Welcome, " + document.getElementById("txtUsername").value + "!");
+        }
+        function onClearBtnClick(){
+            document.getElementById("txtUsername").value = "";
+            document.getElementById("txtPassword").value = "";
+        }
+    </script>
 </head>
 
 <body>
@@ -29,13 +40,15 @@
                 </tr>
                 <tr>    
                     <!-- Password -->
-                    <td><label for="txtUsername">PASSWORD: </label></td>
-                    <td><input type="text" id="txtUsername"></td><br>
+                    <td><label for="txtPassword">PASSWORD: </label></td>
+                    <td><input type="text" id="txtPassword"></td><br>
                 </tr>
                 <tr>   
                     <!-- Buttons -->
-                    <td><input type="submit" id="btnSubmit" value="SUBMIT"></td>
-                    <td><input type="reset" id="btnCancel" value="CANCEL"></td>
+                    <!--<td><input type="submit" id="btnSubmit" value="SUBMIT"></td>
+                    <td><input type="reset" id="btnCancel" value="CANCEL"></td>-->
+                    <td><button type="submit" onClick="onLoginBtnClick()">Login</button</td>
+                    <td><button type="button" onClick="onClearBtnClick()">Clear</button></td>
                 </tr>
             </table>
         </form>
