@@ -7,6 +7,7 @@
 -->
 <!DOCTYPE html>
 <head>
+    <meta charset="UTF-8">
     <style>
         .login{
             display: flex;
@@ -20,6 +21,18 @@
     </style>
     <script>
         function onLoginBtnClick(){
+            const errorMsg = "INCOMPLETE LOGIN DETAILS";
+            var username = document.getElementById("txtUsername").value.trim();
+            let isUsernameEmpty = true;
+            if(username.length === 0){
+                let isUsernameEmpty = true;
+                alert(errorMsg);
+                errorMsg = "ERROR: Either the username or the password were not provided. Please try again."
+            }
+            else {
+                isUsernameEmpty = false; 
+            }
+            console.log("isUsernameEmpty=", isUsernameEmpty);
             alert("Welcome, " + document.getElementById("txtUsername").value + "!");
         }
         function onClearBtnClick(){
